@@ -1,0 +1,14 @@
+"""
+Given a string, determine if it is a palindrome, considering only alphanumeric characters and ignoring cases.
+"""
+def palindrome(A):
+
+  A = A.lower()
+  A = A.split(" ")
+  A = list(A)
+
+  A = [j for i in A for j in i if j.isalnum()]
+  
+  return(A == A[::-1])
+
+print(palindrome("race a car"))
